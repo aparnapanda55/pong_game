@@ -15,8 +15,8 @@ class Ball extends StatelessWidget {
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           colors: [
-            Colors.indigo,
-            Colors.red,
+            Color(0xfffC996CC),
+            Color(0xfff6E85B2),
           ],
         ),
       ),

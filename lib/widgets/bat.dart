@@ -11,7 +11,7 @@ class Bat extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      color: Colors.indigo[400],
+      color: Color(0xfff3E2C41),
     );
   }
 }

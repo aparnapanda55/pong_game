@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pong_simple/screen/starting_scree.dart';
 import 'package:pong_simple/widgets/ball.dart';
 import 'package:pong_simple/widgets/bat.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 enum Direction {
   up,
@@ -166,6 +167,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff5C527F),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
@@ -196,8 +198,22 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
                 Positioned(
                   top: 0,
                   left: 0,
-                  child: Text(
-                    'Score: ' + score.toString(),
+                  child: Card(
+                    elevation: 20,
+                    color: Color(0xfffC996CC),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        'Score: ' + score.toString(),
+                        style: GoogleFonts.robotoMono(
+                          textStyle: const TextStyle(
+                            color: Color(0xfff261C2C),
+                            fontWeight: FontWeight.w900,
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pong_simple/widgets/pong.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartingScreen extends StatefulWidget {
   const StartingScreen({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class _StartingScreenState extends State<StartingScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff5C527F),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           final bounceHeight = constraints.maxHeight * 0.5;
@@ -59,8 +61,8 @@ class _StartingScreenState extends State<StartingScreen>
                                 begin: Alignment.topRight,
                                 end: Alignment.bottomLeft,
                                 colors: [
-                                  Colors.indigo,
-                                  Colors.red,
+                                  Color(0xfffC996CC),
+                                  Color(0xfff6E85B2),
                                 ],
                               ),
                             ),
@@ -71,10 +73,12 @@ class _StartingScreenState extends State<StartingScreen>
                   ),
                   Text(
                     'Simple Pong',
-                    style: TextStyle(
-                      color: Colors.indigo[200],
-                      fontWeight: FontWeight.w800,
-                      fontSize: 35,
+                    style: GoogleFonts.robotoMono(
+                      textStyle: const TextStyle(
+                        color: Color(0xfff261C2C),
+                        fontWeight: FontWeight.w900,
+                        fontSize: 40,
+                      ),
                     ),
                   ),
                 ],
@@ -90,7 +94,7 @@ class _StartingScreenState extends State<StartingScreen>
               context, MaterialPageRoute(builder: (context) => const Pong()));
         },
         child: const Text("Start"),
-        backgroundColor: Colors.pink[300],
+        backgroundColor: Color(0xfffC996CC),
       ),
     );
   }
