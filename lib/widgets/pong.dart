@@ -116,6 +116,12 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
   void moveBat(DragUpdateDetails update) {
     setState(() {
       batPosition += update.delta.dx;
+      if (batPosition < 0) {
+        batPosition = 0;
+      }
+      if (batPosition > (width - batWidth)) {
+        batPosition = width - batWidth;
+      }
     });
   }
   //......--------...........
