@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pong_simple/screen/starting_scree.dart';
-import 'package:pong_simple/widgets/pong.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple-Pong',
+      title: 'Simple Pong',
       theme: ThemeData.dark(),
       home: const HomePage(),
     );
